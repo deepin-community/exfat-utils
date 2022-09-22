@@ -1,0 +1,28 @@
+Source: exfat-utils
+Section: otherosfs
+Priority: optional
+Maintainer: Sven Hoexter <hoexter@debian.org>
+Build-Depends: debhelper-compat (= 13), pkg-config
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Homepage: https://github.com/relan/exfat
+Vcs-Git: https://git.sven.stormbind.net/exfat-utils.git
+Vcs-Browser: https://git.sven.stormbind.net/?p=sven/exfat-utils.git
+
+Package: exfat-utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: exfatprogs
+Recommends: exfat-fuse
+Description: utilities to create, check, label and dump exFAT filesystem
+ Utilities to manage extended file allocation table filesystem.
+ This package provides tools to create, check, dump and label the
+ filesystem. It contains
+  - dumpexfat to dump properties of the filesystem
+  - exfatfsck / fsck.exfat to report errors found on a exFAT filesystem
+  - exfatlabel to label a exFAT filesystem
+  - mkexfatfs / mkfs.exfat to create a exFAT filesystem.
+ The tools included in this package are the exfat-utils developed
+ as an independent implementation by the exfat-fuse author, the tools
+ build by Samsung engineers for the Linux exFAT implementation are
+ available in the exfatprogs package.

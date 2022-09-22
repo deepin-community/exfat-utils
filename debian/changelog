@@ -1,0 +1,206 @@
+exfat-utils (1.3.0-2) unstable; urgency=medium
+
+  * Update debhelper compat level to 13.
+  * Update to Standards-Version 4.5.0 - no changes required.
+  * Update debian/copyright for the year 2020.
+  * Conflict with the exfatprogs package.
+  * Update package description to emphasize the difference between
+    exfat-utils and exfatprogs as independent implementations.
+  * Add Rules-Requires-Root: no to debian/control.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sat, 04 Jul 2020 20:48:11 +0200
+
+exfat-utils (1.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update d/copyright up to 2018.
+  * Increase Standards-Version to 4.2.1 - no changes required.
+  * Move debhelper compat level definition to Build-Depends.
+
+ -- Sven Hoexter <hoexter@debian.org>  Wed, 31 Oct 2018 22:43:17 +0100
+
+exfat-utils (1.2.8-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Increment dh compat level to 11.
+  * Remove --with autoreconf from dh invocation, it's default since
+    compat level 10.
+  * Update VCS-Git URL to a working https endpoint.
+  * Update Standards-Version to 4.1.3.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sat, 03 Feb 2018 22:43:16 +0100
+
+exfat-utils (1.2.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Standards-Version to 4.0.0.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sun, 25 Jun 2017 12:15:14 +0200
+
+exfat-utils (1.2.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 15 May 2017 17:34:18 +0200
+
+exfat-utils (1.2.5-2) unstable; urgency=medium
+
+  * Move from autotools-dev to dh-autoreconf to ease backporting.
+    Patch provided by Nicholas D Steeves. (Closes: #851922)
+
+ -- Sven Hoexter <hoexter@debian.org>  Fri, 20 Jan 2017 11:20:53 +0100
+
+exfat-utils (1.2.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sven Hoexter <hoexter@debian.org>  Wed, 07 Dec 2016 17:56:36 +0100
+
+exfat-utils (1.2.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.8 - no changes required.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sat, 25 Jun 2016 14:19:55 +0200
+
+exfat-utils (1.2.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sven Hoexter <hoexter@debian.org>  Tue, 22 Dec 2015 14:16:09 +0100
+
+exfat-utils (1.2.2-1) unstable; urgency=low
+
+  * New upstream release.
+    + Drop patch kfreebsd-compat, applied upstream.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sun, 06 Dec 2015 14:40:25 +0100
+
+exfat-utils (1.2.1-2) unstable; urgency=low
+
+  * Change to source format 3.0 quilt.
+  * Add d/patches/kfreebsd-compat so we can build on GNU/kfreebsd.
+
+ -- Sven Hoexter <hoexter@debian.org>  Thu, 08 Oct 2015 14:34:03 +0200
+
+exfat-utils (1.2.1-1) unstable; urgency=low
+
+  * New upstream release.
+    + Changes from scons to autotools
+    + Includes a fix for CVE-2015-8026
+  * Remove d/install, no longer required.
+  * Remove old scons overrides from d/rules.
+  * Build-Depend on autotools-dev and pkg-config instead of scons.
+  * Set --sbindir=/sbin to stay consistent with the current install location.
+  * Update debian/copyright.
+  * Readd debian/watch pointing now at the github release page.
+  * Update the Homepage field in d/control.
+
+ -- Sven Hoexter <hoexter@debian.org>  Wed, 07 Oct 2015 12:15:27 +0200
+
+exfat-utils (1.1.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update Standards-Version to 3.9.6 - no changes required.
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 20 Apr 2015 10:50:54 +0200
+
+exfat-utils (1.1.0-2) unstable; urgency=low
+
+  * Remove debian/watch - recent changes at Google code required
+    different download links which do not contain readable hrefs.
+  * Extent debian/copyright up to 2014.
+  * Update debian/copyright license statement - with 1.1.0 upstream
+    relicensed from GPLv3 to GPLv2 or later.
+  * Update link in debian/copyright to the download location.
+  * Add "-D_GNU_SOURCE" unconditionally to the list of CCFLAGS, needed
+    to build on kfreebsd.
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 01 Sep 2014 09:46:12 +0200
+
+exfat-utils (1.1.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #759156)
+  * Standards-Version: 3.9.5
+  * Added "-Wall -std=c99" to the CFLAGS from the list of default
+    flags given in the upstream SConstruct file.
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 25 Aug 2014 20:23:59 +0200
+
+exfat-utils (1.0.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Update all years in debian/copyright.
+
+ -- Sven Hoexter <hoexter@debian.org>  Thu, 07 Feb 2013 20:24:34 +0100
+
+exfat-utils (1.0.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove my bogus -pie from hardening-flags for real.
+
+ -- Sven Hoexter <hoexter@debian.org>  Wed, 23 Jan 2013 21:05:11 +0100
+
+exfat-utils (0.9.8-3) experimental; urgency=low
+
+  * Revert the change from 0.9.8-2, the correct fix is
+    to assign CFLAGS to CCFLAGS so the correct set of common
+    flags will be picked up by scons.
+
+ -- Sven Hoexter <hoexter@debian.org>  Thu, 25 Oct 2012 17:14:58 +0200
+
+exfat-utils (0.9.8-2) experimental; urgency=low
+
+  * Build without -fPIE - hardening flags -pie.
+
+ -- Sven Hoexter <hoexter@debian.org>  Thu, 25 Oct 2012 12:46:46 +0200
+
+exfat-utils (0.9.8-1) experimental; urgency=low
+
+  * New upstream release.
+    + The mkfs utility was rewritten and can now
+      create filesystems up to several exabytes.
+  * Dropped all patches - merged upstream.
+  * Dropped all usage of quilt - currently not required.
+  * No longer use CFLAGS as CCFLAGS, the SConstruct file
+    now honors CCFLAGS.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sun, 12 Aug 2012 20:05:31 +0200
+
+exfat-utils (0.9.7-2) unstable; urgency=low
+
+  * Move manual link creation from debian/rules to debian/links
+    and thus make use of dh_link.
+  * Switch dh compat level from 8 to 9.
+  * Enable all hardening flags via DEB_BUILD_MAINT_OPTIONS.
+  * Export CFLAGS as CCFLAGS which is honored by the current
+    SConstruct file.
+  * Add debian/patches/honor-cppflags - scons should use exported
+    CPPFLAGS.
+  * Add debian/patches/utf16-fix - fix handling of characters beyond BMP.
+    Thanks to Vladimir Serbinenko <phcoder@gmail.com>.
+  * Add build-dep on quilt, use dh quilt addon in debian/rules.
+  * Add README.source to reference quilt.
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 21 May 2012 21:19:35 +0200
+
+exfat-utils (0.9.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.3 - no changes required.
+  * Remove config.log, in the clean target (via override dh_auto_clean).
+
+ -- Sven Hoexter <hoexter@debian.org>  Fri, 09 Mar 2012 21:19:25 +0100
+
+exfat-utils (0.9.6-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sven Hoexter <hoexter@debian.org>  Sat, 14 Jan 2012 18:21:18 +0100
+
+exfat-utils (0.9.5-1) unstable; urgency=low
+
+  * Initial release. (Closes: #625611)
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 02 Jan 2012 12:59:11 +0100
+

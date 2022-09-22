@@ -1,0 +1,2 @@
+version=3
+https://github.com/relan/exfat/releases .*/exfat-utils-(\d\S*)\.tar\.gz
